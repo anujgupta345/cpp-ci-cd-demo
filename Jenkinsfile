@@ -6,6 +6,15 @@ pipeline {
     }
 
     stages {
+    
+    	stage('Checkout') {
+            steps {
+                checkout([$class: 'GitSCM', 
+                          branches: [[name: 'refs/heads/main']], 
+                          userRemoteConfigs: [[url: 'https://github.com/anujgupta345/cpp-ci-cd-demo']]])
+            }
+        }
+
         stage('Clone Repo') {
             steps {
                 git 'https://github.com/anujgupta345/cpp-ci-cd-demo'
