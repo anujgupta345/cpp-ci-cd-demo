@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                git 'https://github.com/anujgupta345/cpp-ci-cd-demo.git'
+                git 'https://github.com/anujgupta345/cpp-ci-cd-demo'
             }
         }
 
